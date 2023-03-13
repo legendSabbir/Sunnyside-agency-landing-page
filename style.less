@@ -107,6 +107,7 @@ header {
   z-index: 2;
   
   .container {
+    --header-color: hsl(0, 0%, 100%);
     padding: 32px 24px;
     position: absolute;
     top: 0;
@@ -115,7 +116,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    &.active {
+      --header-color: hsl(198, 62%, 26%);
+      position: fixed;
+      background-color: #fff;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.5s ease forwards;
+      
+      .logo img {
+        filter: invert(25%) sepia(40%) saturate(809%) hue-rotate(152deg) brightness(30%) contrast(94%);
+      }
+      
+      .navbar-list.active { top: calc(100% + 25px); }
+    }
+    
   }
+}
+
+
+@keyframes slideIn {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
 }
 
 .navbar-list {
@@ -171,7 +193,7 @@ header {
   .line {
     width: 100%;
     height: 2px;
-    background-color: @white;
+    background-color: var(--header-color);
     transition: @transition-1;
   }
   
@@ -210,7 +232,10 @@ header {
   transform: translateX(-50%);
   text-align: center;
   
-  img { display: inline-block; }
+  img { 
+    display: inline-block;
+    animation: jump-down 2s ease infinite;
+  }
 }
 
  h1 {
@@ -221,6 +246,18 @@ header {
   margin-block-end: 49px;
 }
 
+@keyframes jump-down {
+
+  0%,
+  50%,
+  100% { transform: translateY(0); }
+
+  12.5%,
+  37.5% { transform: translateY(20px); }
+
+  25% { transform: translateY(10px); }
+
+}
 
 
 
@@ -399,10 +436,10 @@ footer {
 
 .footer-logo {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   
-  img {
+  img { 
     filter: brightness(0) saturate(100%) invert(39%) sepia(14%) saturate(1477%) hue-rotate(115deg) brightness(94%) contrast(95%);
     width: 174px;
     transform: translateX(-6px);
@@ -438,6 +475,25 @@ footer {
 }
 
 
+[data-reveal] {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.75s ease;
+  
+  &.revealed {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+[data-reveal="image"] {
+  opacity: 0;
+  transform: unset;
+  transition: 0.75s ease;
+  
+  &.revealed { opacity: 1; }
+}
+
 
 
 /*----------------------------------*\
@@ -454,6 +510,16 @@ footer {
     .container {
       padding: 35px 40px;
       padding-inline-end: 49px;
+      
+      &.active { 
+        .nav-link { color: @very-dark-desaturated-blue }
+        .nav-btn {
+          background-color: @yellow;
+          color: @olive-drab-7;
+          
+          &:hover { opacity: 0.5; }
+        }
+      }
     }
     
     .logo img {

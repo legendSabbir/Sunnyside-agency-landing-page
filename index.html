@@ -10,8 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet/less" type="text/css" href="style.less" />
-  <script src="https://cdn.jsdelivr.net/npm/less@latest/dist/less.min.js" async></script>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -32,15 +31,15 @@
       <ul class="navbar-list">
         
         <li>
-          <a href="#" class="nav-link">About</a>
+          <a href="#about" class="nav-link">About</a>
         </li>
         
         <li>
-          <a href="#" class="nav-link">Services</a>
+          <a href="#services" class="nav-link">Services</a>
         </li>
         
         <li>
-          <a href="#" class="nav-link">Projects</a>
+          <a href="#projects" class="nav-link">Projects</a>
         </li>
         
         <li>
@@ -88,7 +87,7 @@
       - ABOUT
     -->
     
-    <section class="about">
+    <section class="about" id="about">
       
       <div class="about-img-box">
         <picture>
@@ -99,18 +98,18 @@
       
       <div class="about-content">
         
-        <h2 class="about-title">Transform your brand</h2>
+        <h2 class="about-title" data-reveal>Transform your brand</h2>
         
-        <p class="about-text">
+        <p class="about-text" data-reveal>
           We are a full-service creative agency specializing in helping brands grow fast.
           Engage your clients through compelling visuals that do most of the marketing for you.
         </p>
         
-        <a href="#" class="about-link">Learn more</a>
+        <a href="#" class="about-link" data-reveal>Learn more</a>
         
       </div>
       
-      <div class="about-img-box">
+      <div class="about-img-box" data-reveal="image">
         <picture>
           <source media="(min-width: 768px)" srcset="./images/desktop/image-stand-out.jpg">
           <img src="./images/mobile/image-stand-out.jpg" alt="transform image" class="w-100">
@@ -119,15 +118,15 @@
       
       <div class="about-content">
         
-        <h2 class="about-title">Stand out to the right audience</h2>
+        <h2 class="about-title" data-reveal>Stand out to the right audience</h2>
         
-        <p class="about-text">
+        <p class="about-text" data-reveal>
           Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
           we’ll build and
           extend your brand in digital places.
         </p>
         
-        <a href="#" class="about-link pink">Learn more</a>
+        <a href="#" class="about-link pink" data-reveal>Learn more</a>
         
       </div>
       
@@ -139,19 +138,19 @@
       -  SERVICES
     -->
     
-    <section class="services">
+    <section class="services" id="services">
       
       <div class="services-box">
         
         <picture>
           <source media="(min-width: 768px)" srcset="./images/desktop/image-graphic-design.jpg">
-          <img src="./images/mobile/image-graphic-design.jpg" alt="Graphic design" class="w-100">
+          <img src="./images/mobile/image-graphic-design.jpg" alt="Graphic design" class="w-100" data-reveal="image">
         </picture>
         
         <div class="service-absolute-content">
-          <h3 class="services-title">Graphic design</h3>
+          <h3 class="services-title" data-reveal>Graphic design</h3>
           
-          <p class="services-text">
+          <p class="services-text" data-reveal>
             Great design makes you memorable. We deliver artwork that underscores your brand message and captures
             potential clients’
             attention.
@@ -164,13 +163,13 @@
         
         <picture>
           <source media="(min-width: 768px)" srcset="./images/desktop/image-photography.jpg">
-          <img src="./images/mobile/image-photography.jpg" alt="Photography" class="w-100">
+          <img src="./images/mobile/image-photography.jpg" alt="Photography" class="w-100" data-reveal="image">
         </picture>
         
         <div class="service-absolute-content">
-          <h3 class="services-title blue">Photography</h3>
+          <h3 class="services-title blue" data-reveal>Photography</h3>
           
-          <p class="services-text blue">
+          <p class="services-text blue" data-reveal>
             Increase your credibility by getting the most stunning, high-quality photos that improve your business
             image.
           </p>
@@ -188,17 +187,17 @@
     
     <section class="testimonials">
       
-      <h4 class="testimonials-title">Client testimonials</h4>
+      <h4 class="testimonials-title" data-reveal>Client testimonials</h4>
       
       <ul class="testimonials-list">
         
-        <li class="testimonials-client">
+        <li class="testimonials-client" data-reveal>
           
           <div class="client-img-box">
             <img src="./images/image-emily.jpg" alt="client emily image" class="w-100" >
           </div>
           
-          <p class="client-text">
+          <p class="client-text" data-reveal>
             We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
             hit.
           </p>
@@ -209,13 +208,13 @@
           
         </li>
         
-        <li class="testimonials-client">
+        <li class="testimonials-client" data-reveal>
           
           <div class="client-img-box">
             <img src="./images/image-thomas.jpg" alt="client thomas image" class="w-100" >
           </div>
           
-          <p class="client-text">
+          <p class="client-text" data-reveal>
             Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
             enjoyable experience.
           </p>
@@ -226,13 +225,13 @@
           
         </li>
         
-        <li class="testimonials-client">
+        <li class="testimonials-client" data-reveal>
           
           <div class="client-img-box">
             <img src="./images/image-jennie.jpg" alt="client jennie image" class="w-100" >
           </div>
           
-          <p class="client-text">
+          <p class="client-text" data-reveal>
             Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
           </p>
           
@@ -252,7 +251,7 @@
       -  PROJECTS 
     -->
     
-    <section class="projects">
+    <section class="projects" id="projects" data-reveal="image">
       
       <a href="#" class="project-img-box">
         <source media="(min-width: 768px)" srcset="./images/desktop/image-gallery-milkbottles.jpg">
@@ -288,55 +287,57 @@
   
   
   <footer>
-    
-    <div class="footer-logo">
-      <img src="./images/logo.svg" alt="">
+    <div class="container" data-reveal>
+      
+      <div class="footer-logo">
+        <img src="images/logo.svg" alt="Sunnyside agency logo">
+      </div>
+      
+      <ul class="footer-list">
+        
+        <li>
+          <a href="#" class="footer-link">About</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-link">Services</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-link">Projects</a>
+        </li>
+        
+      </ul>
+      
+      <ul class="social-list">
+        
+        <li>
+          <a href="#" class="social-link">
+            <img src="images/icon-facebook.svg" alt="icon">
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="social-link">
+            <img src="images/icon-instagram.svg" alt="icon">
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="social-link">
+            <img src="images/icon-twitter.svg" alt="icon">
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="social-link">
+            <img src="images/icon-pinterest.svg" alt="icon">
+          </a>
+        </li>
+        
+      </ul>
+      
     </div>
-    
-    <ul class="footer-list">
-      
-      <li>
-        <a href="#" class="footer-link">About</a>
-      </li>
-      
-      <li>
-        <a href="#" class="footer-link">Services</a>
-      </li>
-      
-      <li>
-        <a href="#" class="footer-link">Projects</a>
-      </li>
-      
-    </ul>
-    
-    <ul class="social-list">
-      
-      <li>
-        <a href="#" class="social-link">
-          <img src="images/icon-facebook.svg" alt="icon">
-        </a>
-      </li>
-      
-      <li>
-        <a href="#" class="social-link">
-          <img src="images/icon-instagram.svg" alt="icon">
-        </a>
-      </li>
-      
-      <li>
-        <a href="#" class="social-link">
-          <img src="images/icon-twitter.svg" alt="icon">
-        </a>
-      </li>
-      
-      <li>
-        <a href="#" class="social-link">
-          <img src="images/icon-pinterest.svg" alt="icon">
-        </a>
-      </li>
-      
-    </ul>
-    
   </footer>
   
   
